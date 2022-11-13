@@ -1,18 +1,13 @@
-// url: https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
-// program: 2_sortOddNumbers.js
+// url: https://www.codewars.com/kata/5266876b8f4bf2da9b000362/train/javascript
+// program: 3_whoLikes.js
 
-function sortArray(arr){
-  let temp = 0
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i] % 2 != 0){
-      for(let j = i + 1; j < arr.length; j++){
-        if ((arr[j] % 2 != 0) && (arr[j] < arr[i])){
-          temp = arr[i]
-          arr[i] = arr[j]
-          arr[j] = temp
-        }
-      }
-    }
-  }
-  return arr
+function likes(names) {
+  whoLikes = 
+  (names.length == 0) ? 'no one likes'
+  : (names.length == 1) ? `${names[0]} likes`
+  : (names.length == 2) ? `${names[0]} and ${names[1]} like`
+  : (names.length == 3) ? `${names[0]}, ${names[1]} and ${names[2]} like`
+  : `${names[0]}, ${names[1]} and ${names.length - 2} others like`
+
+  return `${whoLikes} this`
 }
